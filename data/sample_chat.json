@@ -1,0 +1,167 @@
+{
+ "name": "spiral0",
+ "type": "bot_chat",
+ "id": 7858880570,
+ "messages": [
+  {
+   "id": 15179,
+   "type": "message",
+   "date": "2025-10-27T21:26:20",
+   "date_unixtime": "1761582380",
+   "from": "Альберт",
+   "from_id": "user1133050218",
+   "text": [
+    {
+     "type": "bot_command",
+     "text": "/start"
+    }
+   ],
+   "text_entities": [
+    {
+     "type": "bot_command",
+     "text": "/start"
+    }
+   ]
+  },
+  {
+   "id": 15180,
+   "type": "message",
+   "date": "2025-10-27T21:26:21",
+   "date_unixtime": "1761582381",
+   "from": "spiral0",
+   "from_id": "user7858880570",
+   "text": [
+    "Привет! Отправь команду ",
+    {
+     "type": "bot_command",
+     "text": "/stats"
+    },
+    " для анализа."
+   ],
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Привет! Отправь команду "
+    },
+    {
+     "type": "bot_command",
+     "text": "/stats"
+    },
+    {
+     "type": "plain",
+     "text": " для анализа."
+    }
+   ]
+  },
+  {
+   "id": 15181,
+   "type": "message",
+   "date": "2025-10-27T21:26:27",
+   "date_unixtime": "1761582387",
+   "from": "Альберт",
+   "from_id": "user1133050218",
+   "text": [
+    {
+     "type": "bot_command",
+     "text": "/stats"
+    }
+   ],
+   "text_entities": [
+    {
+     "type": "bot_command",
+     "text": "/stats"
+    }
+   ]
+  },
+  {
+   "id": 15182,
+   "type": "message",
+   "date": "2025-10-27T21:26:27",
+   "date_unixtime": "1761582387",
+   "from": "spiral0",
+   "from_id": "user7858880570",
+   "text": "Анализ запущен... (заглушка)",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "Анализ запущен... (заглушка)"
+    }
+   ]
+  },
+  {
+   "id": 15183,
+   "type": "message",
+   "date": "2025-10-27T21:44:04",
+   "date_unixtime": "1761583444",
+   "from": "Альберт",
+   "from_id": "user1133050218",
+   "text": "привет",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "привет"
+    }
+   ]
+  },
+  {
+   "id": 15184,
+   "type": "message",
+   "date": "2025-10-27T21:44:08",
+   "date_unixtime": "1761583448",
+   "from": "Альберт",
+   "from_id": "user1133050218",
+   "text": "как дела",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "как дела"
+    }
+   ]
+  },
+  {
+   "id": 15185,
+   "type": "message",
+   "date": "2025-10-27T21:44:18",
+   "date_unixtime": "1761583458",
+   "from": "Альберт",
+   "from_id": "user1133050218",
+   "text": "13123",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "13123"
+    }
+   ]
+  },
+  {
+   "id": 15186,
+   "type": "message",
+   "date": "2025-10-27T21:44:20",
+   "date_unixtime": "1761583460",
+   "from": "Альберт",
+   "from_id": "user1133050218",
+   "text": "2313123",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "2313123"
+    }
+   ]
+  },
+  {
+   "id": 15187,
+   "type": "message",
+   "date": "2025-10-27T21:44:22",
+   "date_unixtime": "1761583462",
+   "from": "Альберт",
+   "from_id": "user1133050218",
+   "text": "1231312",
+   "text_entities": [
+    {
+     "type": "plain",
+     "text": "1231312"
+    }
+   ]
+  }
+ ]
+}
