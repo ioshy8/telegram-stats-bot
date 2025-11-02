@@ -7,7 +7,9 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from src.config import TELEGRAM_TOKEN
 from src.rag_engine import create_rag_index
 from src.tools import detect_tool
+from src.services.rag_service import RAGService
 
+rag_service = RAGService()
 # Настройка логгера
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
@@ -53,13 +55,16 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Не удалось загрузить статистику.")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    global _index, _llm, _query_engine
-
-    user_query = update.message.text.strip()
-    if not user_query:
+    if tool_response:
+        await update.message.reply_text(tool_response)
         return
 
-    logger.info(f"Получен запрос: {user_query}")
+    try:
+        reply = await rag_service.query(user_query)
+        await update.message.reply_text(reply)
+    except Exception as e:
+        logger.error(f"Ошибка RAG: {e}")
+        await update.message.reply_text("Ошибка при поиске ответа.")
 
     # Проверка внешних инструментов (заглушка на День 2)
     tool_response = await detect_tool(user_query)

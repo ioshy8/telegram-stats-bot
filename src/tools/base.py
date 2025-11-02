@@ -1,0 +1,10 @@
+# src/tools/base.py
+from abc import ABC, abstractmethod
+
+class Tool(ABC):
+    name: str
+    description: str
+
+    @abstractmethod
+    async def run(self, query: str) -> str:
+        pass
