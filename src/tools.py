@@ -2,9 +2,9 @@
 import httpx
 import logging
 import re
-
+from .currency import CurrencyTool  # ← новый импорт
 logger = logging.getLogger(__name__)
-
+_currency_tool = CurrencyTool()
 async def get_usd_rate() -> str:
     """Получает курс доллара к рублю."""
     try:
@@ -50,8 +50,13 @@ async def detect_tool(query: str) -> str | None:
     Определяет, нужно ли вызывать внешний инструмент.
     Возвращает ответ инструмента или None.
     """
-    query_lower = query.lower()
-
+    q = query.lower()
+    if re.search(r"курс.*доллар|курс.*usd", q):
+        return await _currency_tool.run(query)
+    if re.search(r"погода.*москв", q):
+        # Позже добавите WeatherTool аналогично
+        return "Погода пока не реализована."
+    return None
     # Курс доллара
     if re.search(r"курс.*доллар", query_lower) or re.search(r"курс.*usd", query_lower):
         return await get_usd_rate()
